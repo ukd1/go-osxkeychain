@@ -148,8 +148,6 @@ func protocolTypeFromRef(proto C.CFTypeRef) ProtocolType {
 		return ProtocolHTTP
 	case C.kSecAttrProtocolHTTPS:
 		return ProtocolHTTPS
-	case C.kSecAttrProtocolAny:
-		return ProtocolAny
 	}
 	panic(fmt.Sprintf("unknown proto in protocolTypeToGo: %v", proto))
 }
